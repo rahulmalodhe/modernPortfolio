@@ -1,13 +1,12 @@
-import { useState } from "react";
-import { IoCopyOutline } from "react-icons/io5";
+import {useState} from "react";
+import {IoCopyOutline} from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
 import Lottie from "react-lottie";
 
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 
-
-import { BackgroundGradientAnimation } from "./GradientBg";
+import {BackgroundGradientAnimation} from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
@@ -52,8 +51,8 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const leftLists = ["Javascript", "React", "Typescript"];
+  const rightLists = ["Redux", "Express", "Next.Js"];
 
   const [copied, setCopied] = useState(false);
 
@@ -67,7 +66,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "malodhe18@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -84,7 +83,7 @@ export const BentoGridItem = ({
         //   you can generate the color from here https://cssgradient.io/
         background: "rgb(4,7,29)",
         backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+          "linear-gradient(90deg, rgba(253,45,0,1) 0%, rgba(223,0,124,1) 100%)",
       }}
     >
       {/* add img divs */}
@@ -99,8 +98,9 @@ export const BentoGridItem = ({
           )}
         </div>
         <div
-          className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"
-            } `}
+          className={`absolute right-0 -bottom-5 ${
+            id === 5 && "w-full opacity-80"
+          } `}
         >
           {spareImg && (
             <img
@@ -176,15 +176,16 @@ export const BentoGridItem = ({
               {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
               {/* add handleCopy() for the copy the text */}
               <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
+                className={`absolute -bottom-5 right-0 ${
+                  copied ? "block" : "block"
+                }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
               <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
+                title={copied ? "Email is Copied!" : "Copy email address"}
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
