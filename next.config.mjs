@@ -1,4 +1,5 @@
 import {withSentryConfig} from "@sentry/nextjs";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
@@ -15,8 +16,8 @@ export default withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-    org: "Rahul Malodhe",
-    project: "Portfolio website using next js",
+    org: "rahul-malodhe",
+    project: "rahulmalodhe-portfolio",
   },
   {
     // For all available options, see:
