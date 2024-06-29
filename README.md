@@ -51,7 +51,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/portfolio.git
+[git clone https://github.com/rahulmalodhe/modernPortfolio.git]
 cd portfolio
 ```
 
@@ -80,7 +80,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
